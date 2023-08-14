@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake Game</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jogo da cobrinha de graça">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="main.js" type="module" defer></script>
+</head>
+<body>
+  <div class="wrapper hide ">
+    <div class="game-details">
+      <span class="score">Score: 0</span>
+      <h1 class="title-game-details">SNAKE</h1>
+      <span class="high-score">High Score:</span>
+    </div>
+    <div class="play-board">
+    </div>
+    <div class="controls">
+      <i data-key="ArrowLeft"class="fa-solid fa-arrow-left-long"></i>
+      <i data-key="ArrowUp"class="fa-solid fa-arrow-up-long"></i>
+      <i data-key="ArrowRight"class="fa-solid fa-arrow-right-long"></i>
+      <i data-key="ArrowDown"class="fa-solid fa-arrow-down-long"></i>
+    </div>
+  </div>
+
+  <div class="card-start ">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <div class="header">
+    <h1>SNAKE</h1> <span id="spanBy">By Lucas Lima ~ Zywl</span>
+  </div>
+    <div class="input-box">
+      <label for="nickName">Nickname: </label>
+      <input type="text" id="nickName" name="nick" minlength="2" maxlength="10" placeholder="Digite..." required>
+    </div>
+        <button id="btnStart">
+        <i class="fa-solid fa-play-circle"></i>
+        Play
+      </button>
+      </div>
+      
+</body>
+</html>
