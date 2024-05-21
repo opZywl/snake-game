@@ -99,4 +99,11 @@ function playGame() {
   screenMenu.classList.add('hide')
 }
 
+(function(w, d, s, u) {
+  w.UC2BChat = function(c) { w.UC2BChat._.push(c) }; w.UC2BChat._ = []; w.UC2BChat.url = u;
+  var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+  j.async = true; j.src = "https://chat.fonetalk.com.br/livechat/livechat.min.js?_=201903270000";
+  h.parentNode.insertBefore(j, h);
+  })(window, document, 'script', "https://chat.fonetalk.com.br/livechat");
+
 btn.addEventListener('click', playGame)
