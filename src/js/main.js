@@ -5,9 +5,10 @@ const screenMenu = document.querySelector('.card-start')
 
 (function(w, d, s, u) {
   w.UC2BChat = function(c) { w.UC2BChat._.push(c) }; w.UC2BChat._ = []; w.UC2BChat.url = u;
-  var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+  var h = d.getElementById('uc2b-chat-container');
+  var j = d.createElement(s);
   j.async = true; j.src = "https://chat.fonetalk.com.br/livechat/livechat.min.js?_=201903270000";
-  h.parentNode.insertBefore(j, h);
+  h.appendChild(j);
 })(window, document, 'script', "https://chat.fonetalk.com.br/livechat");
 
 function playGame() {
