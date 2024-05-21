@@ -3,6 +3,13 @@ const inputNick = document.querySelector('#nickName')
 const screenGame = document.querySelector('.wrapper')
 const screenMenu = document.querySelector('.card-start')
 
+(function(w, d, s, u) {
+  w.UC2BChat = function(c) { w.UC2BChat._.push(c) }; w.UC2BChat._ = []; w.UC2BChat.url = u;
+  var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+  j.async = true; j.src = "https://chat.fonetalk.com.br/livechat/livechat.min.js?_=201903270000";
+  h.parentNode.insertBefore(j, h);
+})(window, document, 'script', "https://chat.fonetalk.com.br/livechat");
+
 function playGame() {
   const playBoard = document.querySelector('.play-board');
   const scoreDisplay = document.querySelector('.score');
@@ -93,17 +100,14 @@ function playGame() {
   }
 
   changeFoodPosition();
+  UC2BChat(function() {
+    this.setPlayerName(playerName);
+  });
   setIntervalId = setInterval(initGame, 100)
   document.addEventListener('keydown', changeDirection);
   screenGame.classList.remove('hide')
   screenMenu.classList.add('hide')
 }
 
-(function(w, d, s, u) {
-  w.UC2BChat = function(c) { w.UC2BChat._.push(c) }; w.UC2BChat._ = []; w.UC2BChat.url = u;
-  var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-  j.async = true; j.src = "https://chat.fonetalk.com.br/livechat/livechat.min.js?_=201903270000";
-  h.parentNode.insertBefore(j, h);
-  })(window, document, 'script', "https://chat.fonetalk.com.br/livechat");
 
 btn.addEventListener('click', playGame)
