@@ -101,9 +101,6 @@ function playGame() {
   }
 
   changeFoodPosition();
-  UC2BChat(function() {
-    this.setPlayerName(playerName);
-  });
   setIntervalId = setInterval(initGame, 100)
   document.addEventListener('keydown', changeDirection);
   screenGame.classList.remove('hide')
