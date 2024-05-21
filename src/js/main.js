@@ -99,5 +99,4 @@ function playGame() {
   screenMenu.classList.add('hide')
 }
 
-
 btn.addEventListener('click', playGame)
