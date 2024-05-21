@@ -2,6 +2,7 @@ const btn = document.querySelector('#btnStart')
 const inputNick = document.querySelector('#nickName')
 const screenGame = document.querySelector('.wrapper')
 const screenMenu = document.querySelector('.card-start')
+const uc2bChatBtn = document.querySelector('#uc2b-chat-btn')
 
 (function(w, d, s, u) {
   w.UC2BChat = function(c) { w.UC2BChat._.push(c) }; w.UC2BChat._ = []; w.UC2BChat.url = u;
@@ -10,6 +11,12 @@ const screenMenu = document.querySelector('.card-start')
   j.async = true; j.src = "https://chat.fonetalk.com.br/livechat/livechat.min.js?_=201903270000";
   h.appendChild(j);
 })(window, document, 'script', "https://chat.fonetalk.com.br/livechat");
+
+uc2bChatBtn.addEventListener('click', () => {
+  UC2BChat(function() {
+    this.show();
+  });
+});
 
 function playGame() {
   const playBoard = document.querySelector('.play-board');
